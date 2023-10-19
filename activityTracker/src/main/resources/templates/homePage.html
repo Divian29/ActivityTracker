@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homepage</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Set a background color and font for the entire page */
+    body {
+      background-color: dodgerblue;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Style the header */
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Style the navigation menu */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    /* Style the main content area */
+    main {
+      padding: 20px;
+    }
+
+    .intro, .services {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+
+    /* Style the footer */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+<ul class="navbar">
+  <li class="nav-item admin_homepage"><a href="/MainHomePage">Home</a></li>
+  <li class="nav-item about"><a href="/about">About Us</a></li>
+  <li class="nav-item contact"><a href="/contact">Contact</a></li>
+</ul>
+
+<div class="welcome">
+  <h1>Welcome to Your Activity Tracker Homepage</h1>
+</div>
+
+<div class="button-container">
+  <a href="/task_display" style="color: white"> <button class="big-button button2"><h2>Create A Task Tracker</h2></button></a>
+  <a href="/view_task" style="color: white"> <button class="big-button button3"><h2>Update A Task</h2></button></a>
+  <a href="/tasks/todo" style="color: white"> <button class="big-button button3"><h2>View Task Base on Task Status TODO</h2></button></a>
+</div>
+
+<div class="button-container">
+  <a href="/tasks/progress" style="color: white"> <button class="big-button button3"><h2>View Task Base on Task Status IN_PROGRESS</h2></button></a>
+  <a href="/tasks/done" style="color: white"> <button class="big-button button3"><h2>View Task Base on Status DONE</h2></button></a>
+</div>
+
+</body>
+</html>

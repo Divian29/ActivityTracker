@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>User Registration page</title>
+  <link rel="stylesheet" href="/register.css">
+</head>
+<body>
+<h1 style="text-align: center">Create an account</h1>
+<div class="form">
+  <form action="/cus_register" method="post" th:object="${customerModel}">
+    <div class=input-box>
+      <input type="text" name = "firstName" placeholder="Enter your firstname" required>
+    </div>
+    <div class=input-box>
+      <input type="text" name = "lastName" placeholder="Enter your lastname" required>
+    </div>
+    <div class=input-box>
+      <input type="email" name = "email" placeholder="Enter your email">
+    </div>
+    <div class=input-box>
+      <input type="text" name = "userName" placeholder="Enter your username">
+    </div>
+    <div class=input-box>
+      <input type="text" name = "age" placeholder="Enter your age">
+    </div>
+    <div class="input-box">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      <input type="password" name="password" placeholder="Enter your password" required>
+    </div>
+
+    <div class = "input-box">
+      <button>
+        Register
+      </button>
+    </div>
+    <a href="/cus_login">Already have an account? Login</a>
+  </form>
+</div>
+
+</body>
+</html>

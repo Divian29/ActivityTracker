@@ -1,0 +1,108 @@
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: cornflowerblue;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Task header */
+.task-header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.task-header h1 {
+    font-size: 24px;
+}
+
+/* Task list */
+.task-list {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-item .task-title {
+    flex: 1;
+}
+
+.task-item .task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Task completion status */
+.task-completed {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.task-pending {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Add task button */
+.add-task-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-task-button:hover {
+    background-color: #0056b3;
+}
+
+/* Form for adding tasks */
+.add-task-form {
+    margin-top: 20px;
+}
+
+/* Input field */
+.task-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button for adding a task */
+.add-task-submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-task-submit:hover {
+    background-color: #0056b3;
+}

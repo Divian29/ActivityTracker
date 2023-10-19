@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homepage</title>
+
+  <style th:inline="text">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Set a background color and font for the entire page */
+    body {
+      background-color: #007BFF;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Style the header */
+    header {
+      background-color: #333;
+      color: cornflowerblue;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Style the navigation menu */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    /* Style the main content area */
+    main {
+      padding: 20px;
+    }
+
+    .intro, .services {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+
+    /* Style the footer */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+  </style>
+
+
+</head>
+<body>
+
+<ul class="navbar">
+  <li class="nav-item admin_homepage"><a href="/">Home</a></li>
+  <li class="nav-item about"><a href="/about">About Us</a></li>
+  <li class="nav-item contact"><a href="/contact">Contact</a></li>
+</ul>
+
+<div class="welcome">
+  <h1>Activity Tracker</h1>
+  <h1>Register or Login to create your activity tracker</h1>
+</div>
+
+<div class="button-container">
+  <a href="/cus_register" style="color: white"> <button class="big-button button2">Register A New Account</button></a>
+  <a href="/cus_login" style="color: white"> <button class="big-button button3"> Login if Already Have An Account</button></a>
+</div>
+
+</body>
+</html>

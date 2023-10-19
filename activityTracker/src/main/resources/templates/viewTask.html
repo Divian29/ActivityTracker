@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Details</title>
+  <link rel="stylesheet" type="text/css" href="/task.css">
+
+</head>
+
+
+
+<body>
+
+<div class="form2">
+  <ul class="navbar">
+    <li class="nav-item admin_homepage"><a href="/MainHomePage">Home</a></li>
+    <li class="nav-item createTask"><a href="/task_display">Create A Task</a></li>
+    <li class="nav-item updateTask"><a href="/view_task">Update Task</a></li>
+    <li class="nav-item about"><a href="/about">About Us</a></li>
+    <li class="nav-item contact"><a href="/contact">Contact</a></li>
+  </ul>
+</div>
+
+<!--<h1>List of tasks to be done</h1>-->
+<form action="/view_task" id="taskForm" th:object="${task}" method="post">
+  <table>
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Due Date</th>
+      <th>Created Time</th>
+      <th>Completed Time</th>
+      <th>Update</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="task : ${tasks}">
+      <td>
+        <span th:text="${task.title}"></span>
+      </td>
+      <td>
+        <span th:text="${task.description}"></span>
+      </td>
+      <td>
+        <!-- Add a unique ID to the status cell for each task -->
+        <span th:id="'status-' + ${task.id}" th:text="${task.status.name()}"></span>
+      </td>
+      <td>
+        <span th:text="${task.dueDate}"></span>
+      </td>
+      <td>
+        <span th:text="${task.createdTime}"></span>
+      </td>
+
+      <td>
+        <span th:text="${task.completedTime}"></span>
+      </td>
+
+      <td>
+        <form th:action="@{/updateTaskStatus}" method="post">
+          <input type="hidden" name="taskId" th:value="${task.id}" />
+          <button type="submit">Task Done</button>
+        </form>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</form>
+</body>
+</html>

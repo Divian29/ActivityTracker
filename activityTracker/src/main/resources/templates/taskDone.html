@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tasks with Status DONE</title>
+  <link rel="stylesheet" type="text/css" href="/task.css">
+</head>
+<body>
+<h1>Tasks with Status DONE</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th>Due Date</th>
+    <th>Created Time</th>
+    <th>Created Time</th>
+
+    <!-- Add more table headers for other fields if needed -->
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="task : ${tasks}">
+    <td th:text="${task.title}"></td>
+    <td th:text="${task.description}"></td>
+    <td th:text="${task.status}"></td>
+    <td th:text="${task.dueDate}"></td>
+    <td th:text="${task.createdTime}"></td>
+    <td th:text="${task.completedTime}"></td>
+
+
+
+    <!-- Add more table data cells for other fields if needed -->
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

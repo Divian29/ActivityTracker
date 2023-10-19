@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="/login.css" />
+</head>
+<body>
+<h1>LOGIN IN</h1>
+<div class="form">
+  <form method="post" action="/cus_login" th:object="${customerModel}">
+    <h2>Login</h2>
+    <div class="input-box">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      <input type="text" name="userName" placeholder="UserName" required/>
+      <input type="password" name="password" placeholder="Password" required/>
+
+
+      <div class="input-box">
+        <button type="submit">Login</button>
+      </div>
+
+      <a href="/cus_register">Register</a>
+
+    </div>
+
+  </form>
+
+</div>
+</body>
+</html>
